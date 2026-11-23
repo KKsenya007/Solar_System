@@ -1,0 +1,188 @@
+/* Основні налаштування для всієї сторінки */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0b0e1a; /* Глибокий темно-синій космічний фон */
+    background-image: radial-gradient(circle at top, #182242 0%, #0b0e1a 70%);
+    color: #e2e8f0; /* Світлий текст для комфортного читання */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Приховуємо стандартні лінії <hr>, оскільки тепер у нас є картки */
+hr {
+    display: none;
+}
+
+/* Шапка сайту */
+header {
+    background-color: #13192e;
+    border: 1px solid #2a3759;
+    border-radius: 16px;
+    padding: 30px 25px;
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Яскраві заголовки */
+h1 {
+    color: #38bdf8; /* Яскравий блакитний колір */
+    font-size: 2.3rem;
+    margin-bottom: 12px;
+    text-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+h2 {
+    color: #fbbf24; /* Яскравий золотисто-сонячний колір */
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #263354;
+    padding-bottom: 8px;
+}
+
+h3 {
+    color: #7dd3fc;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #cbd5e1;
+    max-width: 750px;
+    margin: 0 auto 20px auto;
+}
+
+/* Меню навігації (перетворюємо посилання на стильні кнопки) */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+    font-size: 0; /* Приховуємо символи розділювача "|" з HTML */
+}
+
+nav a {
+    font-size: 1rem; /* Повертаємо розмір шрифту для самих кнопок */
+    text-decoration: none;
+    background-color: #1e294b;
+    color: #f8fafc;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 1px solid #3b82f6;
+    font-weight: 600;
+    transition: all 0.3s ease; /* Плавний перехід кольору */
+}
+
+/* Ефект зміни кольору кнопок при наведенні */
+nav a:hover {
+    background-color: #38bdf8;
+    color: #0b0e1a;
+    border-color: #38bdf8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.5);
+}
+
+/* Картки для секцій, планет та цікавих фактів */
+section, article {
+    background-color: #141b33;
+    border: 1px solid #263354;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Вкладені картки фактів на сторінці facts.html */
+section article {
+    background-color: #1a2340;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+article:hover {
+    border-color: #38bdf8;
+}
+
+/* Зображення */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 15px auto;
+    border: 2px solid #2a3759;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Абзаци та списки */
+p {
+    margin-bottom: 12px;
+}
+
+strong {
+    color: #93c5fd;
+}
+
+ul, ol {
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Підвал сайту */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #13192e;
+    border-radius: 16px;
+    border: 1px solid #2a3759;
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+/* Адаптація для смартфонів (екрани до 600px) */
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    header {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav a {
+        text-align: center;
+        padding: 12px;
+    }
+
+    section, article {
+        padding: 18px;
+    }
+}
